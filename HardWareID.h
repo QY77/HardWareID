@@ -10,23 +10,40 @@
 #define HardWareID_h
 
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+
+    #ifdef __linux__
+
+    #include <stdint.h>
+    #include <fcntl.h>
+    #include <sys/ioctl.h>
+    #include <linux/hdreg.h>
+    #include <ifaddrs.h>
+    #include <sys/socket.h>
+    #include <arpa/inet.h>
+    #include <sys/ioctl.h>
+    #include <linux/if.h>
+
+    #endif
+
+
 using namespace std;
 
+void HardWareID();
 
-static const std::string base64_chars =
+static const string base64_chars =
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 "abcdefghijklmnopqrstuvwxyz"
 "0123456789+/";
-
-void HardWareID();
 
 static inline bool is_base64(unsigned char c) {
     return (isalnum(c) || (c == '+') || (c == '/'));
 }
 
-std::string base64_encode(unsigned char const* bytes_to_encode, unsigned int in_len) {
-    std::string ret;
+string base64_encode(unsigned char const* bytes_to_encode, unsigned int in_len) {
+    string ret;
     int i = 0;
     int j = 0;
     unsigned char char_array_3[3];
@@ -67,13 +84,13 @@ std::string base64_encode(unsigned char const* bytes_to_encode, unsigned int in_
     
 }
 
-std::string base64_decode(std::string const& encoded_string) {
+string base64_decode(string const& encoded_string) {
     size_t in_len = encoded_string.size();
     int i = 0;
     int j = 0;
     int in_ = 0;
     unsigned char char_array_4[4], char_array_3[3];
-    std::string ret;
+    string ret;
     
     while (in_len-- && ( encoded_string[in_] != '=') && is_base64(encoded_string[in_])) {
         char_array_4[i++] = encoded_string[in_]; in_++;
