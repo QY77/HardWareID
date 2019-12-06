@@ -14,19 +14,25 @@
 #include <stdlib.h>
 #include <string.h>
 
-    #ifdef __linux__
+#ifdef __linux__
 
-    #include <stdint.h>
-    #include <fcntl.h>
-    #include <sys/ioctl.h>
-    #include <linux/hdreg.h>
-    #include <ifaddrs.h>
-    #include <sys/socket.h>
-    #include <arpa/inet.h>
-    #include <sys/ioctl.h>
-    #include <linux/if.h>
+#include <stdint.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+#include <linux/hdreg.h>
+#include <ifaddrs.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <sys/ioctl.h>
+#include <linux/if.h>
 
-    #endif
+#endif
+
+#ifdef _WIN32
+#include <windows.h>
+
+#endif
+
 
 
 using namespace std;

@@ -3,6 +3,8 @@
 
 ### 一、支持三端Windows、Linux、OSX
 
+命令行执行如下：
+
 OSX:
 
 ```
@@ -32,9 +34,16 @@ SyJMOUFhF3IAcxp1GzsIJhcnCTkULRgvATQaKwVgDDsVbVVjPAo+HngIfV0rRiMDZwIiUiFEZBBjACBN
 Windows:
 
 ```
+C:\qy\HWID_ALL>g++ HardWareID.cpp -o HardWareID.exe
+C:\qy\HWID_ALL>.\HardWareID.exe
 
+HARDWARE ID :
+
+MHFJC00PSQ8/Dz8HNwFEfV19cHpaelp6Wnpaelp6Wnpaend9XX1dfV19XX1dfV19XX1dfV19XVBaelp6Wnpaelp6Wnpaelp6Wnpaend9XX1dfV19XX1dfV19XX1dfV19XVBaelp6Wnpaelp6Wnpaelp6Wnpaend9XX1dfV19XX1dfV19XX1dfV19XVBaelp6Wnpaelp6Wnpaelp6Wnpaend9XX1dfV19XX1dfV19XX1dfV19XVBaalpgUBMpGyIYXR8lHSoQJWREZGljQ2NDY0NjQ2NDY0NjQ2NDY0NjQ05EZERkRGREZERkRGREZERkRGREZGljUWFbb15kUWJYbVRuWh8lYyUFJSgiGlljW25UbV1nJBAqHlpgWBk5GRQePh4+Hj4ePh4+Hj4ePh4+Hj4ePjM5ND5wH3EUNBQ0FDQUNBQ0FBkT
+
+C:\qy\HWID_ALL>
 ```
 
 ### 二、验证
 
-验证使用同一套代码，验证前后HardWareID是否一样。
+验证使用同一套代码，验证前后字符串是否相等。
