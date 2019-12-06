@@ -1,5 +1,5 @@
 # HardWareID
-获取pc硬件码（基本通过shell命令获取）
+获取pc硬件码（普通用户权限下）
 
 ### 一、支持三端Windows、Linux、OSX
 
